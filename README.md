@@ -8,12 +8,12 @@ FxBlog - 基于Adobe Flex技术的开源博客程序
 [http://www.k-zone.cn/fxblog/](http://www.k-zone.cn/fxblog/)
 
 ### 技术要点：  
-1、基于Adobe Flex SDK 4.6.0.23201B； 
-2、全站采用 RSL + Modules + Parsley 架构； 
-3、Modules之间的通讯（主程序与Module通讯、Modules之间的通讯）采用Parsley独有的Message机制； 
-4、采用Parsley的配置功能（Flex配置、XML配置）可以方便的对Flex Modules进行管理、扩展，以达到Flex业务分离/解耦的目的； 
-5、在Parsley的基础上融合了其他框架的优点，如Robotlegs、PureMVC的Mediator机制； 
-6、基于Parsley的IoC方式和ActionScript 3.0的绑定机制（Binding），所以视图层（V）和逻辑层（M C）彻底分离；
+1、基于Adobe Flex SDK 4.6.0.23201B；   
+2、全站采用 RSL + Modules + Parsley 架构；   
+3、Modules之间的通讯（主程序与Module通讯、Modules之间的通讯）采用Parsley独有的Message机制；   
+4、采用Parsley的配置功能（Flex配置、XML配置）可以方便的对Flex Modules进行管理、扩展，以达到Flex业务分离/解耦的目的；   
+5、在Parsley的基础上融合了其他框架的优点，如Robotlegs、PureMVC的Mediator机制；   
+6、基于Parsley的IoC方式和ActionScript 3.0的绑定机制（Binding），所以视图层（V）和逻辑层（M C）彻底分离；  
 
 ## 更新日志：
 version 5.0 [2012-5-23]
