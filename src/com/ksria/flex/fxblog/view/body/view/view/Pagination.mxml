@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pagination:PaginationComp 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:pagination="http://pagination.ksria.com" 
+	pagesize="6" offset="2" length="8" 
+	backLabel="后滚" previousLabel="后退" nextLabel="前进" forwardLabel="前滚" 
+	pageTurnVisible="false" pageCtrlVisible="false" advModel="false" pageCmbVisible="true"
+>
+	
+</pagination:PaginationComp>

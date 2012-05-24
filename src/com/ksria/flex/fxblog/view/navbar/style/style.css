@@ -1,0 +1,21 @@
+/* CSS file */
+
+/*
+//------------------------------
+//  导航栏
+//------------------------------
+*/
+
+/**
+* 导航栏背景
+*/
+.navbarBg {
+	skinClass: ClassReference("com.ksria.flex.fxblog.view.navbar.skins.NavBarBgSkin");
+}
+
+/**
+* 导航栏button样式
+*/
+.navbarButton {
+	skinClass: ClassReference("com.ksria.flex.fxblog.view.navbar.skins.NavBarButtonSkin");
+}

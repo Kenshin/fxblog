@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects 
+    xmlns="http://www.spicefactory.org/parsley"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.spicefactory.org/parsley 
+        				http://www.spicefactory.org/parsley/schema/2.3/parsley-core.xsd"
+    >
+    
+    <!--
+	<object id="host" type="String">
+		<constructor-args>
+			<string>0.0.0.0333sfsfd</string>
+		</constructor-args>
+	</object>
+
+	<object id="navBarList" type="mx.collections.ArrayList">
+    	<property name="source">
+			<array>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="首页"/>
+					<property name="url" value="index"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="标签云"/>
+					<property name="url" value="http://www.k-zone.cn/zblog/tags.asp"/>
+				</object>
+			</array>
+		</property>
+	</object>
+	-->
+	
+</objects>

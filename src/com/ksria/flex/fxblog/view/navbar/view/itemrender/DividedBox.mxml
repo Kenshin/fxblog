@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:HGroup 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/halo" 
+	width="2" height="26" gap="0">
+	
+	<!--
+		这个分割条用作button之间的分隔
+	-->
+	
+	<s:Group width="100%" height="100%">
+
+		<s:Rect left="0" right="0" top="0" bottom="0">
+			<s:fill>
+				<s:SolidColor color="0x8ab928" />
+			</s:fill>
+		</s:Rect>
+
+		<s:Rect left="0" right="0" top="1" bottom="0">
+			<s:fill>
+				<s:SolidColor color="0x4c8d00" />
+			</s:fill>
+		</s:Rect>
+
+		<s:Rect left="0" right="0" top="1" bottom="1">
+			<s:fill>
+				<s:SolidColor color="0x6ca428" />
+			</s:fill>
+		</s:Rect>
+
+		<s:Rect left="0" right="0" top="1" bottom="3" >
+	
+			<s:fill>
+				<s:LinearGradient scaleX="25.5708" rotation="90">
+					<s:GradientEntry id="ge1" color="0x6aa300" ratio="0.5"/>
+					<s:GradientEntry id="ge2" color="0x5d9a00" ratio="0.2"/>
+					<s:GradientEntry id="ge3" color="0x4c8d00" ratio="0.2"/>
+					<s:GradientEntry id="ge4" color="0x4c8d00" ratio="0.1"/>
+				</s:LinearGradient>
+			</s:fill>
+	
+		</s:Rect>
+		
+	</s:Group>
+
+	<s:Group width="100%" height="100%">
+
+		<s:Rect left="0" right="0" top="0" bottom="0">
+			<s:fill>
+				<s:SolidColor color="0xbddb73" />
+			</s:fill>
+		</s:Rect>
+
+		<s:Rect left="0" right="0" top="1" bottom="0">
+			<s:fill>
+				<s:SolidColor color="0x99c206" />
+			</s:fill>
+		</s:Rect>
+
+		<s:Rect left="0" right="0" top="1" bottom="1">
+			<s:fill>
+				<s:SolidColor color="0xbddb73" />
+			</s:fill>
+		</s:Rect>
+
+		<s:Rect left="0" right="0" top="1" bottom="3" >
+	
+			<s:fill>
+				<s:LinearGradient scaleX="25.5708" rotation="90">
+					<s:GradientEntry id="ge11" color="0xb1d500" ratio="0.5"/>
+					<s:GradientEntry id="ge21" color="0xa5ce00" ratio="0.2"/>
+					<s:GradientEntry id="ge31" color="0x99c206" ratio="0.2"/>
+					<s:GradientEntry id="ge41" color="0x99c206" ratio="0.1"/>
+				</s:LinearGradient>
+			</s:fill>
+	
+		</s:Rect>
+		
+	</s:Group>
+	
+</s:HGroup>

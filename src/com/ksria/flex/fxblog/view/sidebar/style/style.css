@@ -1,0 +1,23 @@
+/* CSS file */
+
+/*
+//------------------------------
+//  侧边栏
+//------------------------------
+*/
+
+/**
+* 侧边栏每个栏目的标题样式
+*/
+.sideBarLabel {
+	fontSize: 15;
+	color: #226622;
+	fontWeight: "bold";
+}
+
+/**
+* 侧边栏每个栏目的标题样式
+*/
+.noticeLabel {
+	skinClass: ClassReference("com.ksria.flex.fxblog.view.sidebar.skins.NoticeTextAreaSkin");
+}

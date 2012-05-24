@@ -1,0 +1,89 @@
+/*
+//------------------------------
+//  中心部位文章样式
+//------------------------------
+*/
+
+/**
+* 全部文章（文章中部样式）
+*/
+.bodyList {
+	contentBackgroundColor: "0xffffff";
+	rollOverColor: "0xffffff";
+	focusColor: "0xffffff";
+	selectionColor: "0xffffff";
+	/*
+	skinClass: ClassReference("com.rianote.fxblog.skin.SideList");
+	*/
+}
+
+/**
+* 文章intro样式
+*/
+.articleIntro {
+	skinClass: ClassReference("com.ksria.flex.fxblog.view.body.skins.ArticleIntroSkin");
+}
+
+/**
+* 文章标题样式
+*/
+.articleTitleLink {
+	fontSize: 20;
+}
+
+/**
+* 日期中的月份样式
+*/
+.mouthLabel {
+	color: #000000;
+	fontWeight: "bold";
+	fontSize: 11;
+}
+
+/**
+* 日期中的月份样式
+*/
+.dayLabel {
+	color: #ffffff;
+	fontWeight: "bold";
+	fontSize: 18;
+}
+
+/**
+* 文章页的标题
+*/
+.articleDetailTitle {
+	color: #598d32;
+	fontSize: 20;
+	fontWeight: "bold";
+}
+
+/**
+* 文章页的标题
+*/
+.articleDetailLabel {
+	color: #808080;
+	fontSize: 13;
+}
+
+/**
+* 文章页的内容
+*/
+.articleDetail {
+	borderStyle : none;
+}
+/**
+* list map里面的title
+*/
+.listTitle {
+	fontSize: 13;
+}
+
+/**
+* list map里面的日期
+*/
+.listDateLabel {
+	color: #cccccc;
+	fontSize: 10;
+}
+

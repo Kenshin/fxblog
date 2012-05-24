@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fx:Object 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+    xmlns:spicefactory="http://www.spicefactory.org/parsley"
+	xmlns:controller="com.ksria.flex.fxblog.controller.*"
+	xmlns:model="com.ksria.flex.fxblog.model.*"
+>
+ 
+	<fx:Declarations>
+		
+		<!-- controller -->
+		<controller:FxBlogCommand />
+		
+		<!-- pm -->
+		<model:FxBlogPM id="fxblogPM" />
+		
+		<!-- zblog vars -->
+		<fx:Object id="zblogVars">
+			<fx:uri>http://www.k-zone.cn/zblog/api/index.asp</fx:uri>
+			<fx:username>null</fx:username>
+			<fx:password>null</fx:password>
+		</fx:Object>
+		
+	</fx:Declarations>
+ 
+</fx:Object>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects 
+    xmlns="http://www.spicefactory.org/parsley"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.spicefactory.org/parsley 
+        				http://www.spicefactory.org/parsley/schema/2.3/parsley-core.xsd"
+    >
+    
+    <object id="moduleUrls" type="Array">
+    	<constructor-args>
+    		<string>com/ksria/flex/fxblog/view/head/HeadModule.swf</string>
+    		<string>com/ksria/flex/fxblog/view/navbar/NavBarModule.swf</string>
+    		<string>com/ksria/flex/fxblog/view/footer/FooterModule.swf</string>
+    		<string>com/ksria/flex/fxblog/view/sidebar/SideBarModule.swf</string>
+			<string>com/ksria/flex/fxblog/view/bottom/BottomModule.swf</string>
+			<string>com/ksria/flex/fxblog/view/body/BodyModule.swf</string>
+		</constructor-args>
+	</object>
+	
+	<object id="navBarList" type="mx.collections.ArrayList">
+    	<property name="source">
+			<array>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="项目主页"/>
+					<property name="url" value="http://www.k-zone.cn/project/fxblog.html"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="博客首页"/>
+					<property name="url" value="index"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="标签云"/>
+					<property name="url" value="tagcloud"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="网站地图"/>
+					<property name="url" value="listmap"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="Flex索引"/>
+					<property name="url" value="flex"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="项目一览"/>
+					<property name="url" value="http://www.k-zone.cn/project"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="纯净版"/>
+					<property name="url" value="http://www.k-zone.cn/m"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="Atlanta"/>
+					<property name="url" value="http://kenshin.aliapp.com/"/>
+				</object>
+				<!--
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="查天气"/>
+					<property name="url" value="weacher"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.view.navbar.vo.NavBarListVO">
+					<property name="title" value="在线词典"/>
+					<property name="url" value="dict"/>
+				</object>
+				-->
+			</array>
+		</property>
+	</object>
+	
+	<!--
+	<object id="navBarList" type="mx.collections.ArrayList">
+    	<property name="source">
+			<array>
+				<object type="com.ksria.flex.fxblog.vo.NavBarListVO">
+					<property name="title" value="首页"/>
+					<property name="url" value="index"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.vo.NavBarListVO">
+					<property name="title" value="标签云"/>
+					<property name="url" value="http://www.k-zone.cn/zblog/tags.asp"/>
+				</object>
+			</array>
+		</property>
+	</object>
+	-->
+	
+	<!--
+    <object id="navBarArr" type="mx.collections.ArrayList">
+    	<property name="source">
+			<array>
+				<object type="com.ksria.flex.fxblog.vo.NavBarListVO">
+					<property name="title" value="首页"/>
+					<property name="url" value="index"/>
+				</object>
+				<object type="com.ksria.flex.fxblog.vo.NavBarListVO">
+					<property name="title" value="标签云"/>
+					<property name="url" value="http://www.k-zone.cn/zblog/tags.asp"/>
+				</object>
+			</array>
+		</property>
+	</object>
+	
+	<object id="aaaa" type="Object">
+		<constructor-args>
+			<string>Hello</string>
+			<int>7</int>
+			<boolean>true</boolean>
+		</constructor-args>
+	</object>
+	
+	<object id="host" type="String">
+		<constructor-args>
+			<string>0.0.0.0</string>
+		</constructor-args>
+	</object>
+	-->
+		
+</objects>

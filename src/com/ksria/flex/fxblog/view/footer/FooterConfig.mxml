@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fx:Object 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+    xmlns:spicefactory="http://www.spicefactory.org/parsley" 
+	xmlns:pm="com.ksria.flex.fxblog.view.footer.view.*"
+>
+	
+	<fx:Declarations>
+		
+		<!-- pm -->
+		<pm:FooterBoxPM id="footerBoxPM" />
+		
+		<!-- value object -->
+		<fx:Object id="footerVars">
+			<fx:copyright>© 2005 k-zone.cn All Rights Reserved.</fx:copyright>
+			<fx:poweredby>powered by zblog4as3 · silvergreen · linklabel · pagination | template by kenshin | version 5.0 · update by 2012-5-23 </fx:poweredby>
+		</fx:Object>
+		
+	</fx:Declarations>
+ 
+</fx:Object>

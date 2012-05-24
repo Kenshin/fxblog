@@ -1,0 +1,24 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/halo";
+
+/*
+//------------------------------
+//  导航栏
+//------------------------------
+*/
+
+/**
+* 导航栏背景
+*/
+.bgColor {
+	backgroundColor : #000000;
+}
+
+/**
+* 导航栏button样式
+*/
+.footerLabel {
+	fontSize: 12;
+	color: #939393;
+}

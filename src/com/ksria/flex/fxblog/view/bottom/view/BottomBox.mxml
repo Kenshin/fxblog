@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:HGroup 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:parsley="http://www.spicefactory.org/parsley"
+	xmlns:view="com.ksria.flex.fxblog.view.bottom.view.view.*"
+	width="100%" height="100%" 
+	gap="40"
+	paddingLeft="24" paddingTop="39"
+>
+	
+	<fx:Declarations>
+		<parsley:ContextBuilder>
+			<parsley:FlexConfig type="{ BottomConfig }" />
+		</parsley:ContextBuilder>
+		<parsley:FastInject objectId="bottomBoxPM" property="model" />
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.ksria.flex.fxblog.view.bottom.BottomConfig;
+			[Bindable] public var model : BottomBoxPM;
+		]]>
+	</fx:Script>
+	
+	<view:Category id="category" />
+	
+	<view:TopArticles id="topArticles" />
+	
+	<view:RandomArticles id="randomArticles" />
+	
+</s:HGroup>

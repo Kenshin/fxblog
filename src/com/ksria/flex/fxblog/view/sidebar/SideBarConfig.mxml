@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fx:Object 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+    xmlns:spicefactory="http://www.spicefactory.org/parsley" 
+	xmlns:pm="com.ksria.flex.fxblog.view.sidebar.view.*"
+	xmlns:model="com.ksria.flex.fxblog.view.sidebar.view.model.*"
+>
+	
+	<fx:Declarations>
+		
+		<!-- pm -->
+		<pm:SideBarBoxPM id="sideBarBoxPM" />
+		
+		<!-- model -->
+		<model:SideBarModel id="model" />
+		
+		<!-- value object -->
+		<!--
+		<fx:Object id="noticeVars">
+			<fx:label>公告</fx:label>
+			<fx:notice>
+				记不住我的BLOG，没有关系，在各大搜索引擎使用关键字<s:span color="#ff0000">kenshin</s:span>或者<s:span color="#ff0000">flex blog</s:span>来搜索即可找到我哦(*^__^*)
+			</fx:notice>
+		</fx:Object>
+		-->
+		
+		<fx:Object id="aboutVars">
+			<fx:label>关于我</fx:label>
+		</fx:Object>
+		
+		<fx:Object id="mybookVars">
+			<fx:label>我的书籍</fx:label>
+			<fx:String>http://www.k-zone.cn/project/firstflexbook.html</fx:String>
+		</fx:Object>
+		
+		<fx:Object id="weiboVars">
+			<fx:label>跟随我</fx:label>
+			<fx:sina>http://t.sina.com.cn/wonlen</fx:sina>
+			<fx:tencent>http://t.qq.com/wonlen</fx:tencent>
+		</fx:Object>
+		
+		<fx:Object id="subscribeVars">
+			<fx:label>订阅我</fx:label>
+			<fx:String>http://feed.feedsky.com/kenshin</fx:String>
+		</fx:Object>
+		
+		<fx:Object id="mobileVars">
+			<fx:label>手机访问</fx:label>
+			<fx:String>http://www.k-zone.cn/m</fx:String>
+		</fx:Object>
+		
+		<fx:Object id="recommendVars">
+			<fx:label>关注一下</fx:label>
+			<fx:recommendList>
+				{ recommendList }
+			</fx:recommendList>
+		</fx:Object>
+		
+		<s:ArrayList id="recommendList">
+			<fx:Object>
+				<fx:title>《Flex第一步》索引</fx:title>
+				<fx:url>Flex第一步</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>tag</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>本站原创Flex教程索引</fx:title>
+				<fx:url>Flex</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>search</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>FxBlog（via Adobe Flex）</fx:title>
+				<fx:url>http://www.k-zone.cn/fxblog</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>link</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>Atlanta（via Node.js）</fx:title>
+				<fx:url>http://kenshin.aliapp.com/</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>link</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>Mobile（via bootstrap）</fx:title>
+				<fx:url>http://www.k-zone.cn/m</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>link</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>关于这里</fx:title>
+				<fx:url>About-k-zone-cn</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>KS的照片汇</fx:title>
+				<fx:url>http://ks.k-zone.cn/</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>link</fx:type>
+			</fx:Object>
+			<!--
+			<fx:Object>
+				<fx:title>Flash Builder新特性</fx:title>
+				<fx:url>Flash Builder新特性</fx:url>
+				<fx:color>0xff0000</fx:color>
+				<fx:type>tag</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>Flex编程注意系列文章</fx:title>
+				<fx:url>Flex编程注意系列文章</fx:url>
+				<fx:color>0xff0000</fx:color>
+				<fx:type>tag</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>Mate Flex Framework系列教程</fx:title>
+				<fx:url>Mate Flex Framework</fx:url>
+				<fx:color>0xff0000</fx:color>
+				<fx:type>search</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>Flex/AIR学习路线</fx:title>
+				<fx:url>Flex/AIR学习路线</fx:url>
+				<fx:color>0xff0000</fx:color>
+				<fx:type>search</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>4u-hemingway-Kenshin修改版下载</fx:title>
+				<fx:url>zblog-theme-4u-hemingway-kenshin</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>Small Office系列软件</fx:title>
+				<fx:url>Small Office系列软件</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>search</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>天气预报系列软件</fx:title>
+				<fx:url>log-2006-05-29-001</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>search</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>友情链接的申请和创作共享原则</fx:title>
+				<fx:url>log-2006-03-25-006</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>关于这里</fx:title>
+				<fx:url>About-k-zone-cn</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>关于Kenshin</fx:title>
+				<fx:url>AboutMe</fx:url>
+				<fx:color>0x9bbb38</fx:color>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			-->
+		</s:ArrayList>
+		
+		<fx:Object id="newArticlesVars">
+			<fx:label>最新文章</fx:label>
+		</fx:Object>
+		
+		<fx:Object id="archivesVars">
+			<fx:label>文章归档</fx:label>
+		</fx:Object>
+		
+	</fx:Declarations>
+ 
+</fx:Object>

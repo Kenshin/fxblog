@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SparkSkin 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	alpha.disabledStates="0.5" 
+	blendMode="normal"
+>
+     
+    <!-- states -->
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="disabled" stateGroups="disabledStates"/>
+		<s:State name="normalWithPrompt"/>
+		<s:State name="disabledWithPrompt" stateGroups="disabledStates"/>
+	</s:states>
+	
+    <!-- background --> 
+	<s:Rect left="0" right="0" top="0" bottom="0">
+
+	 	<s:fill >
+            <s:SolidColor color="0xffffff"/>
+        </s:fill>
+
+    </s:Rect>
+	
+	<!--- Defines the scroller that is used to scroll the TextArea control. -->
+	<s:Scroller 
+		id="scroller" 
+		left="1" top="1" right="1" bottom="1" 
+		minViewportInset="1" 
+		measuredSizeIncludesScrollBars="false" 
+		hasFocusableChildren="false"
+		>
+		<!--- @copy spark.components.supportClasses.SkinnableTextBase#textDisplay -->
+		<s:RichEditableText id="textDisplay" heightInLines="10" widthInChars="15" />
+		
+	</s:Scroller>
+	
+	<!--- Defines the Label that is used for prompt text. The includeInLayout property is false so the prompt text does not affect measurement. -->
+	<s:Label 
+		id="promptDisplay"
+		mouseEnabled="false" mouseChildren="false"
+		includeIn="normalWithPrompt,disabledWithPrompt" 
+		includeInLayout="false"
+	/>
+
+</s:SparkSkin>

@@ -1,0 +1,24 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/halo";
+
+/*
+//------------------------------
+//  底栏
+//------------------------------
+*/
+
+/**
+* 底栏背景
+*/
+.bgColor {
+	backgroundColor : #272727;
+}
+
+/**
+* 底栏文章标题
+*/
+.bottomLabel {
+	fontSize: 15;
+	color: #ffffff;
+}

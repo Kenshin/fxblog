@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	gap="0"
+>
+	
+	<s:Label id="lblCategory" styleName="bottomLabel" />
+	
+	<mx:Spacer height="20" />
+	
+	<s:Line width="100%" height="1">
+		
+		<s:stroke>
+			<s:SolidColorStroke color="0x3d3d3d" />
+		</s:stroke>
+		
+	</s:Line>
+
+	<mx:Spacer height="7" />
+	
+	<s:DataGroup 
+		id="categroyList" 
+		itemRenderer="com.ksria.flex.fxblog.view.bottom.view.view.itemrender.BottomListItem"
+	>
+		
+		<s:layout>
+			<s:VerticalLayout />
+		</s:layout>
+		
+	</s:DataGroup>
+	
+</s:VGroup>

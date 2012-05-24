@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:parsley="http://www.spicefactory.org/parsley"
+	xmlns:skins="com.ksria.flex.fxblog.view.navbar.skins.*" 
+	width="100%" height="100%"
+	verticalCenter="0" 
+>
+	
+	<fx:Declarations>
+		<!--<parsley:ContextBuilder config="{ NavBarConfig }" />-->
+		<parsley:ContextBuilder>
+			<parsley:FlexConfig type="{ NavBarConfig }" />
+		</parsley:ContextBuilder>
+		<parsley:FastInject objectId="navBarBoxPM" property="model" />
+	</fx:Declarations>
+			
+	<fx:Script>
+		<![CDATA[
+			import com.ksria.flex.fxblog.view.navbar.NavBarConfig;
+			[Bindable] public var model : NavBarBoxPM;
+		]]>
+	</fx:Script>
+	
+	<skins:NavBarBgSkin />
+	
+	<s:DataGroup
+		id="datagroup" 
+		itemRenderer="com.ksria.flex.fxblog.view.navbar.view.itemrender.NavBarListItem"
+	>
+		
+		<s:layout>
+			<s:HorizontalLayout />
+		</s:layout>
+		
+	</s:DataGroup>
+	
+</s:Group>

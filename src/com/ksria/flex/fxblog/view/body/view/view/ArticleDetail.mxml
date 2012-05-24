@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:linklabel="http://linklabel.ksria.com"
+	xmlns:subclasses="com.ksria.flex.fxblog.view.body.view.view.subclasses.*"
+	width="100%" height="100%" 
+	addedToStage="dispatchEvent( new Event( 'configureIOC', true ));"
+>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayList;
+			import com.ksria.flex.fxblog.message.FxBlogMessage;
+				
+			[MessageDispatcher]
+			public var dispatcher : Function;
+			
+			/**
+			 * data object
+			 */
+			[Bindable] private var _data : *;
+			public function get data() : * { return _data; }
+			public function set data( v : * ) : void { _data = v; }
+		]]>
+	</fx:Script>
+		
+	<s:Label 
+		id="lblTitle" 
+		text="{ _data.article.title }"
+		styleName="articleDetailTitle" 
+	/>
+	
+	<s:HGroup gap="1" verticalAlign="middle">
+
+		<s:Label 
+			text="{ '　发表于：' }" 
+			styleName="articleDetailLabel"
+		/>
+			
+		<linklabel:LinkLabel 
+			text="{ _data.article.category }" 
+			toolTip="{ _data.article.category }"
+			isUserHandCursor="true"
+			defalutColor="0x598d32"
+			hoverColor="0xcc3300"
+			activeColor="0xcc3300"
+			visitedColor="0x598d32"
+			click="{ dispatcher( new FxBlogMessage( FxBlogMessage.CATEGORY, null, { id : event.target.defaultLabelText })); }"
+		/>
+		
+	</s:HGroup>
+	
+	<s:HGroup gap="1" verticalAlign="middle">
+
+		<s:Label 
+			text="{ '　　标签：' }" 
+			styleName="articleDetailLabel" 
+		/>
+
+		<s:DataGroup itemRenderer="com.ksria.flex.fxblog.view.body.view.view.itemrender.TagListItem">
+			
+			<s:layout>
+				<s:HorizontalLayout gap="2" />
+			</s:layout>
+			
+			<s:dataProvider>
+				{ new ArrayList( _data.article.tags ) }
+			</s:dataProvider>
+			
+		</s:DataGroup>
+		
+	</s:HGroup>
+	
+	<s:HGroup gap="1" verticalAlign="middle">
+		
+		<s:Label 
+			text="{ '外部链接：' }" 
+			styleName="articleDetailLabel" 
+		/>
+		
+		<linklabel:LinkLabel 
+			text="{ _data.article.url }" 
+			toolTip="{ _data.article.url }"
+			isUserHandCursor="true"
+			defalutColor="0x598d32"
+			hoverColor="0xcc3300"
+			activeColor="0xcc3300"
+			visitedColor="0x598d32"
+			click="{ navigateToURL( new URLRequest( _data.article.url ), '_blank' ); }"
+		/>
+		
+	</s:HGroup>
+	
+	<mx:Spacer height="15" />
+	
+	<subclasses:TextArea
+		id="txtIntro" 
+		styleName="articleDetail"
+		width="100%" height="100%" 
+		editable="false" 
+		linkStyle='{{   fontSize:"12", color:"#598d32", textDecoration:"underline" }}'
+		hoverStyle='{{  fontSize:"12", color:"#cc3300", textDecoration:"underline" }}'
+		activeStyle='{{ fontSize:"12", color:"#cc3300", textDecoration:"underline" }}'
+		htmlText="{ _data.content }"
+	/>
+	
+</s:VGroup>

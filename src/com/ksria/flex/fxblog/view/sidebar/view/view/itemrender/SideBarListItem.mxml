@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	creationComplete="creationCompleteHandler()"
+>
+	<fx:Script>
+		<![CDATA[
+			import com.ksria.as3.linklabel.LinkLabel;
+			
+			/**
+			 * create complete event handler
+			 */
+			private function creationCompleteHandler():void {
+				
+				var ll :LinkLabel = new LinkLabel();
+				ll.width            = 200;
+				ll.maxWidth         = 210;
+				ll.isUserHandCursor = true;
+				ll.hoverColor       = 0xff0000;
+				ll.hoverStyle       = 0x0004;
+				ll.activeColor      = 0xff0000;
+				ll.activeStyle      = 0x0004;
+				ll.visitedColor     = 0xe15b1a;
+				
+				if ( data.type == "archivevo" ) {
+					//archives
+					ll.text             = data.name + '(' + data.count + ')';
+					ll.toolTip          = data.name + '(' + data.count + ')';
+					ll.defaultLabelData = { type : 'data', url : data.date };
+					ll.defalutColor     = 0x9bbb38;
+				}
+				else if ( data.type == "articlevo" ) {
+					//new articles
+					ll.text             = data.title;
+					ll.toolTip          = data.title;
+					ll.defaultLabelData = { type : 'title', url : data.alias };
+					ll.defalutColor     = 0x9bbb38;
+				}
+				else if ( data.alias == undefined ) {
+					//recommend
+					ll.text             = data.title;
+					ll.toolTip          = data.title;
+					ll.defaultLabelData = { type : data.type, url : data.url };
+					ll.defalutColor     = data.color;
+				}
+
+				addElement( ll );
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="hovered"/>
+		<s:State name="selected"/>
+	</s:states>
+	
+	<!-- background --> 
+	<s:Rect left="0" right="0" top="0" bottom="0" >
+		
+		<s:fill>
+			<s:SolidColor 
+				color="0xffffff" 
+				color.hovered="0xffffff" 
+				color.selected="0xffffff"
+			/>
+		</s:fill>
+		
+	</s:Rect>
+	
+</s:ItemRenderer>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx" 
+	xmlns:ll="http://linklabel.ksria.com"
+	xmlns:subclasses="com.ksria.flex.fxblog.view.sidebar.view.view.subclasses.*"
+	width="100%"
+	gap="1" 
+>
+
+	<subclasses:SideBarLabel id="lblAbout" />
+	
+	<ll:LinkLabel id="txtAbout" 
+		width="100" 
+		defaultLabelText="我的名片"
+		isUserHandCursor="true"
+		defalutColor="0x9bbb38" defaultStyle="0x0001"
+		hoverColor="0xff0000" hoverStyle="0x0004" 
+		activeColor="0xff0000" activeStyle="0x0004"
+		visitedColor="0xe15b1a" 
+		click="{ navigateToURL( new URLRequest( 'http://kado.im/kenshin' ), '_blank' ); }" 
+	/>
+	
+</s:VGroup>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SparkSkin 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	minWidth="21" minHeight="21" 
+	alpha.disabled="0.5"
+>
+
+    <!-- states -->
+	<s:states>
+		<s:State name="up"/>
+		<s:State name="over"/>
+		<s:State name="down"/>
+		<s:State name="disabled"/>
+	</s:states>
+	
+	<!-- text -->
+	<s:Label 
+		id="labelDisplay"
+		textAlign="center"
+		maxDisplayedLines="1"
+		horizontalCenter="0" top="8"
+		color="0xffffff" color.over="0x010101" color.down="0x010101"
+	/>
+
+</s:SparkSkin>

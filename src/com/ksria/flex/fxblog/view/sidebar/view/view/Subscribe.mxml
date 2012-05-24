@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:subclasses="com.ksria.flex.fxblog.view.sidebar.view.view.subclasses.*"
+	width="100%" 
+	gap="1"
+>
+	
+	<subclasses:SideBarLabel 
+		id="lblSubscribe"
+	/>
+	
+	<s:Image id="imgSubscribe"
+		source="@Embed(source='../../style/assets/rss.png')" 
+		useHandCursor="true" buttonMode="true"
+	/>
+	
+</s:VGroup>

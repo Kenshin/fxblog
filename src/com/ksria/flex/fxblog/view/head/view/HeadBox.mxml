@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:parsley="http://www.spicefactory.org/parsley"
+	width="100%" height="100%"
+>
+	
+	<fx:Declarations>
+		<parsley:ContextBuilder>
+			<parsley:FlexConfig type="{ HeadConfig }" />
+		</parsley:ContextBuilder>
+		<parsley:FastInject objectId="headBoxPM" property="model" />
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.ksria.flex.fxblog.view.head.HeadConfig;
+			[Bindable] public var model : HeadBoxPM;
+		]]>
+	</fx:Script>
+
+	<s:HGroup 
+		verticalAlign="middle" 
+		width="100%" height="100%"
+	>
+		
+		<mx:Spacer width="30" />
+		
+		<s:Label id="lblTitle" styleName="headTitle" />
+		
+		<mx:VRule height="40" width="1" />
+		
+		<s:Label id="lblDesc" styleName="subHeadTitle" />
+		
+		<mx:Spacer width="100%" />
+		
+		<mx:Image source="@Embed(source='../style/assets/search.gif')"/>
+		
+		<s:TextInput 
+			id="txtSearch" 
+			width="180" 
+			styleName="searchTextInput" 
+		/>
+		
+		<mx:Spacer width="60" />
+		
+	</s:HGroup>
+	
+	<mx:Image id="imgGithub"
+		top="0" right="0"
+		useHandCursor="true" buttonMode="true"
+		source="@Embed(source='../style/assets/forkme.png')"/>
+	
+</s:Group>

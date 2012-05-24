@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fx:Object 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+    xmlns:spicefactory="http://www.spicefactory.org/parsley" 
+	xmlns:pm="com.ksria.flex.fxblog.view.head.view.*"
+>
+	
+	<fx:Declarations>
+		
+		<!-- pm -->
+		<pm:HeadBoxPM id="headBoxPM" />
+		
+		<!-- value object -->
+		<fx:Object id="headVars">
+			<fx:title>ＦｘＢＬＯＧ</fx:title>
+			<fx:desc>the Flex Blog based on Adobe® Flex®</fx:desc>
+		</fx:Object>
+		
+		<!-- value object -->
+		<fx:Object id="githubVars">
+			<fx:url>https://github.com/kenshin/fxblog</fx:url>
+		</fx:Object>
+		
+	</fx:Declarations>
+ 
+</fx:Object>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fx:Object 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+    xmlns:spicefactory="http://www.spicefactory.org/parsley" 
+	xmlns:pm="com.ksria.flex.fxblog.view.bottom.view.*"
+	xmlns:model="com.ksria.flex.fxblog.view.bottom.view.model.*"
+>
+	
+	<fx:Declarations>
+		
+		<!-- pm -->
+		<pm:BottomBoxPM id="bottomBoxPM" />
+		
+		<!-- model -->
+		<model:BottomModel id="model" />
+		
+		<!-- value object -->
+		<fx:Object id="categroyVars">
+			<fx:label>网站目录</fx:label>
+		</fx:Object>
+		
+		<fx:Object id="randomArticlesVars">
+			<fx:label>随便看看</fx:label>
+			<fx:randomArticlesList>
+				{ randomArticlesList }
+			</fx:randomArticlesList>
+		</fx:Object>
+		
+		<s:ArrayList id="randomArticlesList">
+			<fx:Object>
+				<fx:title>[Zblog]关于Zblog的进度问题</fx:title>
+				<fx:url>log-2006-03-19-001</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]FXBlog v1.0 Released Beta！</fx:title>
+				<fx:url>log-2006-03-19-002</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]在Flex中传递参数</fx:title>
+				<fx:url>log-2006-03-19-003</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex 2 新特性（一）</fx:title>
+				<fx:url>log-2006-03-19-004</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex的配置和运行（一）</fx:title>
+				<fx:url>log-2006-03-19-005</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex的配置和运行（二）</fx:title>
+				<fx:url>log-2006-03-19-006</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[ZBlog]关於zblog修改的一些建议</fx:title>
+				<fx:url>log-2006-03-19-007</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex Builder 2 downlaod</fx:title>
+				<fx:url>log-2006-03-20-001</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex2 Alpha 1 View</fx:title>
+				<fx:url>log-2006-03-20-002</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]FXBlogV1的一些截图</fx:title>
+				<fx:url>log-2006-03-20-003</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[免费]又一个免费的Blog</fx:title>
+				<fx:url>log-2006-03-20-004</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Zblog]再谈ZBlog代码高亮显示插件</fx:title>
+				<fx:url>log-2006-03-21-001</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Java]再谈Java操作Excel</fx:title>
+				<fx:url>log-2006-03-22-002</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[置顶：索引]本站的索引贴(2006.09.13更新)</fx:title>
+				<fx:url>log-2006-03-25-001</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex格式化工具（Eclipse扩展）</fx:title>
+				<fx:url>flexprettyprintcommand</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+		</s:ArrayList>
+		
+		<fx:Object id="topArticlesVars">
+			<fx:label>最热文章TOP15</fx:label>
+			<fx:topArticlesList>
+				{ topArticlesList }
+			</fx:topArticlesList>
+		</fx:Object>
+		
+		<s:ArrayList id="topArticlesList">
+			<fx:Object>
+				<fx:title>[Flex]《Flex第一步》震撼上市！</fx:title>
+				<fx:url>first-flex-book</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>《Flex第一步》书友会成立</fx:title>
+				<fx:url>Flex-Bertelsmann-Lesering</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[ZBLOG]国庆巨献-4u-hemingway-Kenshin修改版(2007年11月5日更新)</fx:title>
+				<fx:url>zblog-theme-4u-hemingway-kenshin</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]注意！天气预报查询软件现在无法正常使用</fx:title>
+				<fx:url>log-2007-09-29-weather-view-error</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]《Flex第一步》已经到手、各地书店均有销售</fx:title>
+				<fx:url>first-flex-book-pic</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex Dict Online</fx:title>
+				<fx:url>flex-dict</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[AIR]AIR Beta 2.0与AIR Beta3.0的差异和AIR Beta 3.0新增API</fx:title>
+				<fx:url>air-beta2-air-beta3</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]五分钟搞定Flex+PHP+MYSQL</fx:title>
+				<fx:url>log-2007-10-01-Flex-Builder-3-data</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Adobe Flex™ 3 beta 2激动人心的功能（一）</fx:title>
+				<fx:url>log-2007-10-01-Flex-Builder-3-Beta-2-New-features</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[AIR]AIR Note</fx:title>
+				<fx:url>air-note</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex Weather Online</fx:title>
+				<fx:url>flex-weather-v3</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Adobe Flex™ 3 beta 2发布（附上下载地址）</fx:title>
+				<fx:url>log-2007-10-01-flex3-beta2-release</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[ZBLOG]4u-HK个人制定版Realese（附下载地址）</fx:title>
+				<fx:url>4u-HK-download</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>[Flex]Flex 3.0与Flex 2.0的差异性（一）</fx:title>
+				<fx:url>flex2-flex3-otherness</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+			<fx:Object>
+				<fx:title>《Flex第一步》错误汇总</fx:title>
+				<fx:url>Flex-book-bug</fx:url>
+				<fx:type>title</fx:type>
+			</fx:Object>
+		</s:ArrayList>
+		
+	</fx:Declarations>
+ 
+</fx:Object>

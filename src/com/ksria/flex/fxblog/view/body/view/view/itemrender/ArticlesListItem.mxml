@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx" 
+	xmlns:linklabel="http://linklabel.ksria.com"
+	xmlns:subclasses="com.ksria.flex.fxblog.view.body.view.view.subclasses.*"
+	width="100%" 
+	addedToStage="dispatchEvent( new Event( 'configureIOC', true ));" 
+>	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayList;
+			import com.ksria.flex.fxblog.message.FxBlogMessage;
+			
+			[MessageDispatcher]
+			public var dispatcher : Function;
+		]]>
+	</fx:Script>
+	
+	<!-- states -->
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="hovered"/>
+		<s:State name="selected"/>
+	</s:states>
+	
+	<!-- background --> 
+	<s:Rect left="0" right="0" top="0" bottom="0" >
+		
+		<s:fill>
+			<s:SolidColor 
+				color="0xffffff" 
+				color.hovered="0xffffff" 
+				color.selected="0xffffff"
+			/>
+		</s:fill>
+		
+	</s:Rect>
+	
+	<s:VGroup width="100%">
+		
+		<s:HGroup width="100%">
+			
+			<subclasses:DateGroup date="{ data.date }" />
+			
+			<s:VGroup>
+				
+				<linklabel:LinkLabel 
+					text="{ data.title }" 
+					toolTip="{ data.title }"
+					defaultLabelData="{ data.alias }"
+					isUserHandCursor="true"
+					styleName="articleTitleLink" 
+					defalutColor="0x598d32"
+					hoverColor="0xcc3300"
+					activeColor="0xcc3300"
+					visitedColor="0x598d32"
+					click="{ dispatcher( new FxBlogMessage( FxBlogMessage.TITLE, null, event.target.defaultLabelData )); }"
+				/>
+				
+				<s:HGroup>
+					
+					<s:Image source="@Embed(source='../../../style/assets/category.jpg')"/>
+					
+					<linklabel:LinkLabel 
+						text="{ data.category }" 
+						toolTip="{ data.category }"
+						isUserHandCursor="true"
+						defalutColor="0x598d32"
+						hoverColor="0xcc3300"
+						activeColor="0xcc3300"
+						visitedColor="0x598d32"
+						click="{ dispatcher( new FxBlogMessage( FxBlogMessage.CATEGORY, null, { id : event.target.defaultLabelText })); }"
+					/>
+					
+					<mx:Image source="@Embed(source='../../../style/assets/tags.gif')"/>
+					
+					<s:DataGroup itemRenderer="com.ksria.flex.fxblog.view.body.view.view.itemrender.TagListItem">
+						
+						<s:layout>
+							<s:HorizontalLayout gap="2" />
+						</s:layout>
+						
+						<s:dataProvider>
+							{ new ArrayList( data.tags ) }
+						</s:dataProvider>
+						
+					</s:DataGroup>
+
+				</s:HGroup>
+				
+			</s:VGroup>
+		
+		</s:HGroup>
+		
+		<!--
+		<s:TextArea 
+			width="100%" height="200" 
+			editable="false"
+			styleName="articleIntro" 
+			textFlow="{ TextFlowUtil.importFromString( data.intro ) }"
+		/>
+		-->
+		
+		<subclasses:TextArea 
+			id="txtIntro"
+			width="100%" height="200" 
+			editable="false"
+			styleName="articleDetail" 
+			verticalScrollPolicy="off" horizontalScrollPolicy="off"
+			linkStyle='{{   fontSize:"12", color:"#598d32", textDecoration:"underline" }}'
+			hoverStyle='{{  fontSize:"12", color:"#cc3300", textDecoration:"underline" }}'
+			activeStyle='{{ fontSize:"12", color:"#cc3300", textDecoration:"underline" }}'
+			htmlText="{ data.intro }"
+		/>
+		
+	</s:VGroup>
+	
+</s:ItemRenderer>

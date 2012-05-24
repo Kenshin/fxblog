@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx" 
+	width="50" height="50" 
+	addedToStage="dispatchEvent( new Event( 'configureIOC', true ));"
+>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.ksria.flex.fxblog.message.FxBlogMessage;
+			
+			import mx.formatters.DateFormatter;
+			
+			[MessageDispatcher]
+			public var dispatcher : Function;
+
+		    //--------------------------------------------------------------------------
+		    //
+		    //  properties
+		    //
+		    //--------------------------------------------------------------------------
+			
+		    //----------------------------------
+		    //  date : public
+		    //----------------------------------
+
+			/**
+			 * 文章发布日期
+			 */
+			[Bindable]
+			private var _date : Object;
+			public function get date() : Object { return _date; }
+			public function set date( v : Object ) : void { _date = v; formatDate(); }
+
+		    //--------------------------------------------------------------------------
+		    //
+		    //  method
+		    //
+		    //--------------------------------------------------------------------------
+			
+			/**
+			 * 格式化日期
+			 */
+			private function formatDate() : void {
+				var formatter : DateFormatter = new DateFormatter();
+
+				formatter.formatString = "MMM";
+				lblMouth.text = formatter.format( _date );
+				
+				formatter.formatString = "D";
+				lblDay.text = formatter.format( _date ) + "th";
+			}
+
+		    //--------------------------------------------------------------------------
+		    //
+		    //  event
+		    //
+		    //--------------------------------------------------------------------------
+
+		]]>
+	</fx:Script>
+	
+	<s:Image source="@Embed('../../../style/assets/date.png')" />
+	
+	<s:VGroup 
+		width="100%" height="100%"
+		horizontalAlign="center" verticalAlign="middle"
+	>
+
+		<s:Label 
+			id="lblMouth" 
+			styleName="mouthLabel" 
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+		 	click="{ dispatcher( new FxBlogMessage( FxBlogMessage.DATE, null, _date.split( ' ' )[0] )); }"
+		/>
+		
+		<s:Label id="lblDay" 
+			styleName="dayLabel" 
+			useHandCursor="true" buttonMode="true" mouseChildren="false"
+			click="{ dispatcher( new FxBlogMessage( FxBlogMessage.DATE, null, _date.split( ' ' )[0] )); }"
+		/>
+		
+	</s:VGroup>	
+	
+</s:Group>

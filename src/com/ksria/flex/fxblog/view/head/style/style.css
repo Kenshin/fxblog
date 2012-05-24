@@ -1,0 +1,28 @@
+/* CSS file */
+
+/*
+//------------------------------
+//  Head部分
+//------------------------------
+*/
+
+.bgColor {
+	backgroundColor : #000000;
+}
+
+/**
+* blog标题
+*/
+.headTitle {
+	fontSize: 25;
+	fontWeight: "bold";
+	color: #ffffff;
+}
+
+/**
+* blog子标题
+*/
+.subHeadTitle {
+	fontSize: 12;
+	color: #bfbfbf;
+}

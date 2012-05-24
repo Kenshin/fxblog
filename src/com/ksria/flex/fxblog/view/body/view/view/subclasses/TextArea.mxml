@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TextArea 
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:mx="library://ns.adobe.com/flex/mx" 
+	creationComplete="creationCompleteHandler()"
+>
+	
+	<fx:Script>
+		<![CDATA[
+			import flash.text.StyleSheet;
+			
+			/**
+			 * linkStyle object
+			 */
+			[Bindable] private var _linkStyle : Object;
+			public function get linkStyle() : Object { return _linkStyle; }
+			public function set linkStyle( v : Object ) : void { _linkStyle = v; }
+			
+			/**
+			 * hoverStyle object
+			 */
+			[Bindable] private var _hoverStyle : Object;
+			public function get hoverStyle() : Object { return _hoverStyle; }
+			public function set hoverStyle( v : Object ) : void { _hoverStyle = v; }
+			
+			/**
+			 * activeStyle object
+			 */
+			[Bindable] private var _activeStyle : Object;
+			public function get activeStyle() : Object { return _activeStyle; }
+			public function set activeStyle( v : Object ) : void { _activeStyle = v; }
+			
+			/**
+			 * 设定TextArea的css
+			 */
+			private function creationCompleteHandler() : void {
+				
+				var css : StyleSheet = new StyleSheet();
+				
+				css.setStyle( "a:link",   _linkStyle );
+				css.setStyle( "a:hover",  _hoverStyle );
+				css.setStyle( "a:active", _activeStyle );
+				
+				this.styleSheet = css;
+			}
+		]]>
+	</fx:Script>
+	
+</mx:TextArea>

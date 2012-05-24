@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Scroller 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:parsley="http://www.spicefactory.org/parsley"
+	xmlns:head="com.ksria.flex.fxblog.view.head.*"
+	xmlns:navbar="com.ksria.flex.fxblog.view.navbar.*"
+	xmlns:footer="com.ksria.flex.fxblog.view.footer.*"
+	xmlns:sidebar="com.ksria.flex.fxblog.view.sidebar.*"
+	xmlns:bottom="com.ksria.flex.fxblog.view.bottom.*"
+	xmlns:body="com.ksria.flex.fxblog.view.body.*"
+	width="100%" height="100%" 
+>
+	
+	<s:VGroup width="100%" height="100%" gap="0">
+		
+		<s:VGroup width="100%" gap="0">
+			
+			<head:Head />
+			
+			<navbar:NavBar />
+			
+		</s:VGroup>
+		
+		<s:VGroup width="100%" gap="0">
+			
+			<s:HGroup width="100%" gap="0" paddingRight="1">
+				
+				<body:Body />
+				
+				<sidebar:SideBar />
+				
+			</s:HGroup>
+			
+			<bottom:Bottom />
+
+			<footer:Footer />
+			
+		</s:VGroup>
+
+	</s:VGroup>
+
+</s:Scroller>

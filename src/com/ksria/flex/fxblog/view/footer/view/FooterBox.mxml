@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:parsley="http://www.spicefactory.org/parsley"
+	width="100%" height="100%"
+	verticalAlign="middle"
+	paddingLeft="24"
+>
+	
+	<fx:Declarations>
+		<parsley:ContextBuilder>
+			<parsley:FlexConfig type="{ FooterConfig }" />
+		</parsley:ContextBuilder>
+		<parsley:FastInject objectId="footerBoxPM" property="model" />
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.ksria.flex.fxblog.view.footer.FooterConfig;
+			[Bindable] public var model : FooterBoxPM;
+		]]>
+	</fx:Script>
+	
+	<s:Label 
+		id="lblCopyright"
+		styleName="footerLabel" 
+	/>
+	
+	<s:Label 
+		id="lblPoweredby"
+		styleName="footerLabel" 
+	/>
+	
+</s:VGroup>

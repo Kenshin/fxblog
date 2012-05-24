@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns:parsley="http://www.spicefactory.org/parsley"
+	xmlns:view="com.ksria.flex.fxblog.view.body.view.view.*"
+	width="100%" height="100%"
+	verticalAlign="middle" horizontalAlign="left"
+	paddingLeft="24" paddingTop="52" paddingRight="20" paddingBottom="10"
+>
+	
+	<fx:Declarations>
+		<parsley:ContextBuilder>
+			<parsley:FlexConfig type="{ BodyConfig }" />
+		</parsley:ContextBuilder>
+		<parsley:FastInject objectId="model"   property="model" />
+		<parsley:FastInject objectId="service" property="service" />
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.ksria.flex.fxblog.view.body.BodyConfig;
+			import com.ksria.flex.fxblog.view.body.view.model.BodyModel;
+			import com.ksria.flex.fxblog.view.body.view.model.ServiceModel;
+			[Bindable] public var model   : BodyModel;
+			[Bindable] public var service : ServiceModel;
+		]]>
+	</fx:Script>
+	
+	<mx:ViewStack 
+		id="vs" 
+		width="100%" height="100%" 
+		creationPolicy="all"
+	>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			
+			<s:layout>
+				<s:VerticalLayout horizontalAlign="center" paddingTop="30" />
+			</s:layout>
+			
+			<mx:ProgressBar id="bar" mode="manual" width="450" label="文章内容加载中..." />
+			
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			
+			<s:VGroup width="100%" height="100%">
+				
+				<view:ArticlesList id="articlesList" />
+				
+				<s:Group id="paginationGroup" />
+				
+			</s:VGroup>
+			
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			
+			<s:Scroller width="100%" height="100%">
+				
+				<view:TagsCloud id="tagCloud" />
+				
+			</s:Scroller>
+			
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			
+			<s:Scroller width="100%" height="100%">
+				
+				<view:ListMap id="listMap" />
+				
+			</s:Scroller>
+			
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			
+			<s:Scroller width="100%" height="100%">
+				
+				<view:ArticleDetail id="articleDetail" />
+				
+			</s:Scroller>
+			
+		</s:NavigatorContent>
+		
+	</mx:ViewStack>
+	
+	
+</s:VGroup>
