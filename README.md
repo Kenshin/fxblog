@@ -15,7 +15,7 @@ FxBlog - 基于Adobe Flex技术的开源博客程序
 5、在Parsley的基础上融合了其他框架的优点，如Robotlegs、PureMVC的Mediator机制；   
 6、基于Parsley的IoC方式和ActionScript 3.0的绑定机制（Binding），所以视图层（V）和逻辑层（M C）彻底分离；  
 
-## 更新日志：
+### 更新日志：
 version 5.0 [2012-5-23]
 * 基于Adobe Flex SDK 4.6.0.23201B开发
 * 项目主页：[http://www.k-zone.cn/project/fxblog.html](http://www.k-zone.cn/project/fxblog.html)
