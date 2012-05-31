@@ -20,7 +20,35 @@ FxBlog - 基于Adobe Flex技术的开源博客程序
 * Pagination for Flex：[http://www.k-zone.cn/project/flexpagination.html](http://www.k-zone.cn/project/flexpagination.html)
 * Pagination for AS3：[https://github.com/Kenshin/flex-pagination](https://github.com/Kenshin/flex-pagination)
 
+### 使用方法：  
+非Flash Builder构建：  
+<pre>
+编译参数需要增加如下内容：（注意文件夹结构与项目对应）
+-theme ../libs/silvergreen-2.1.swc 
+-swf-version=15
+-target-player=11.2
+-show-invalid-css-property-warnings=false
+-load-config+=../obj/classref.config
+
+需要如下Modules进行编译：
+com/ksria/flex/fxblog/view/head/HeadModule.swf
+com/ksria/flex/fxblog/view/navbar/NavBarModule.swf
+com/ksria/flex/fxblog/view/footer/FooterModule.swf
+com/ksria/flex/fxblog/view/sidebar/SideBarModule.swf
+com/ksria/flex/fxblog/view/bottom/BottomModule.swf
+com/ksria/flex/fxblog/view/body/BodyModule.swf
+</pre>
+
+Flash Builder构建：  
+<pre>
+在FB中，构建一个FxBlog的Flex项目（注意：Flex SDK选取4.6.0.23201B， Flash Player的版本大于11.2.0）
+构建项目完毕后，用.actionScriptProperties替换刚刚构建的.actionScriptProperties文件即可。
+</pre>
+
 ### 更新日志：
+version 5.0（功能（代码）没有改变） [2012-5-31]
+* 增加了构建FxBlog的方法（包括：FB的构建与非FB的构建）
+
 version 5.0 [2012-5-23]
 * 基于Adobe Flex SDK 4.6.0.23201B开发
 * 项目主页：[http://www.k-zone.cn/project/fxblog.html](http://www.k-zone.cn/project/fxblog.html)
